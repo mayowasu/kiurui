@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2026 Astral
+# SPDX-License-Identifier: CC0-1.0
+name: Ruff
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+
+jobs:
+  ruff:
+    runs-on: codeberg-tiny
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff
+      - name: Run Ruff
+        run: ruff check
+      - name: Run Ruff format
+        run: ruff format --check
