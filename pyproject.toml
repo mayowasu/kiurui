@@ -1,0 +1,76 @@
+# SPDX-FileCopyrightText: 2026 Julian Malinowski
+# SPDX-License-Identifier: CC0-1.0
+
+[build-system]
+    requires = ["uv_build>=0.12.1,<0.13"]
+    build-backend = "uv_build"
+
+
+[project]
+    authors = [ { name = "Julian Malinowski" } ]
+    classifiers = [
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: End Users/Desktop",
+        "Natural Language :: English",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: Microsoft :: Windows",
+        "Programming Language :: Python :: 3 :: Only",
+    ]
+    description = "A Python program to generate passwords."
+    license-files = [ "LICENSES/*.txt" ]
+    maintainers = [ { name = "kiichigo" } ]
+    name = "kiurui"
+    requires-python = ">=3.10"
+    version = "1.0.0"
+
+
+[project.optional-dependencies]
+    dev = [
+        "groundwork-sphinx-theme",
+        "pre-commit",
+        "reuse",
+        "ruff",
+        "sphinx"
+    ]
+
+
+[project.urls]
+    Repository = "https://codeberg.org/kiichigo/kiurui"
+    Issues = "https://codeberg.org/kiichigo/kiurui/issues"
+
+
+# Based on https://github.com/secureblue/secureblue/blob/live/pyproject.toml
+[tool.ruff.lint]
+    select = [
+        "ANN", # flake8-annotations
+        "S", # flake8-bandit
+        "B", # flake8-bugbear
+        "A", # flake8-builtins
+        "C4", # flake8-comprehensions
+        "FIX", # flake8-fixme
+        "ICN", # flake8-import-conventions
+        "PIE", # flake8-pie
+        "Q", # flake8-quotes
+        "RSE", # flake8-raise
+        "RET", # flake8-return
+        "SLF", # flake8-self
+        "SIM", # flake8-simplify
+        "TC", # flake8-type-checking
+        "ARG", # flake8-unused-arguments
+        "I", # isort
+        "C90", # mccabe
+        "N", # pep8-naming
+        "E", # pycodestyle error
+        "W", # pycodestyle warning
+        "F", # pyflakes
+        "PL", # pylint
+        "UP", # pyupgrade
+        "FURB", # refurb
+        "RUF", # Ruff-specific rules
+    ]
+    ignore = [
+        "ANN204", # missing-return-type-special-method
+        "ANN401", # any-type
+        "S603", # subprocess-without-shell-equals-true
+    ]
+    mccabe.max-complexity = 8

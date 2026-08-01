@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Julian Malinowski
+# SPDX-License-Identifier: CC0-1.0
+
+repos:
+
+  # SPDX-FileCopyrightText: 2026 Astral
+  # SPDX-License-Identifier: CC0-1.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.1 # Ruff version
+    hooks:
+      - id: ruff-check # Run the linter
+        args: [ --fix ]
+      - id: ruff-format # Run the formatter
+
+  # SPDX-FileCopyrightText: 2020 Free Software Foundation Europe e.V.
+  # SPDX-License-Identifier: CC0-1.0
+  - repo: https://codeberg.org/fsfe/reuse-tool
+    rev: v6.2.0
+    hooks:
+      - id: reuse
