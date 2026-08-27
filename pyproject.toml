@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: CC0-1.0
 
 [build-system]
-    requires = ["uv_build>=0.12.6,<0.13"]
     build-backend = "uv_build"
+    requires = ["uv_build>=0.12.6,<0.13"]
 
 
 [project]
@@ -20,7 +20,7 @@
     license-files = [ "LICENSES/*.txt" ]
     maintainers = [ { name = "kiichigo" } ]
     name = "kiurui"
-    requires-python = ">=3.10"
+    requires-python = ">=3.11"
     version = "1.0.0"
 
 
@@ -35,42 +35,42 @@
 
 
 [project.urls]
-    Repository = "https://codeberg.org/kiichigo/kiurui"
     Issues = "https://codeberg.org/kiichigo/kiurui/issues"
+    Repository = "https://codeberg.org/kiichigo/kiurui"
 
 
 # Based on https://github.com/secureblue/secureblue/blob/live/pyproject.toml
 [tool.ruff.lint]
-    select = [
-        "ANN", # flake8-annotations
-        "S", # flake8-bandit
-        "B", # flake8-bugbear
-        "A", # flake8-builtins
-        "C4", # flake8-comprehensions
-        "FIX", # flake8-fixme
-        "ICN", # flake8-import-conventions
-        "PIE", # flake8-pie
-        "Q", # flake8-quotes
-        "RSE", # flake8-raise
-        "RET", # flake8-return
-        "SLF", # flake8-self
-        "SIM", # flake8-simplify
-        "TC", # flake8-type-checking
-        "ARG", # flake8-unused-arguments
-        "I", # isort
-        "C90", # mccabe
-        "N", # pep8-naming
-        "E", # pycodestyle error
-        "W", # pycodestyle warning
-        "F", # pyflakes
-        "PL", # pylint
-        "UP", # pyupgrade
-        "FURB", # refurb
-        "RUF", # Ruff-specific rules
-    ]
     ignore = [
-        "ANN204", # missing-return-type-special-method
-        "ANN401", # any-type
-        "S603", # subprocess-without-shell-equals-true
+        "ANN204",   # missing-return-type-special-method
+        "ANN401",   # any-type
+        "S603",     # subprocess-without-shell-equals-true
     ]
     mccabe.max-complexity = 8
+    select = [
+        "A",    # flake8-builtins
+        "ANN",  # flake8-annotations
+        "ARG",  # flake8-unused-arguments
+        "B",    # flake8-bugbear
+        "C4",   # flake8-comprehensions
+        "C90",  # mccabe
+        "E",    # pycodestyle error
+        "F",    # pyflakes
+        "FIX",  # flake8-fixme
+        "FURB", # refurb
+        "I",    # isort
+        "ICN",  # flake8-import-conventions
+        "N",    # pep8-naming
+        "PL",   # pylint
+        "PIE",  # flake8-pie
+        "Q",    # flake8-quotes
+        "RET",  # flake8-return
+        "RSE",  # flake8-raise
+        "RUF",  # Ruff-specific rules
+        "S",    # flake8-bandit
+        "SIM",  # flake8-simplify
+        "SLF",  # flake8-self
+        "TC",   # flake8-type-checking
+        "UP",   # pyupgrade
+        "W",    # pycodestyle warning
+    ]
