@@ -6,7 +6,7 @@ repos:
   # SPDX-FileCopyrightText: 2026 Astral
   # SPDX-License-Identifier: CC0-1.0
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.1 # Ruff version
+    rev: v0.16.4 # Ruff version
     hooks:
       - id: ruff-check # Run the linter
         args: [ --fix ]
