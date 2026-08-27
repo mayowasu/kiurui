@@ -8,7 +8,7 @@ Setup
 Before you begin
 ================
 
-Make sure you have a **supported version of Python installed (>3.10)**, and that you're working in the directory where kiurui is located.
+Make sure you have a **supported version of Python installed (>3.11)**, and that you're working in the directory where kiurui is located.
 
 Getting started
 ===============
